@@ -1,0 +1,14 @@
+.main-nav {
+   background-color: map-get($colors, blue);
+   height: $nav-height;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: $size-base * 2;
+   border-bottom: 4px solid black;
+   box-sizing: border-box;
+   .nav-logo {
+      height: 80%;
+   }
+}

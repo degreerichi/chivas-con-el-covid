@@ -1,0 +1,51 @@
+html, body {
+   font-size: $font-size-base;
+   font-family: $font-feature;
+}
+
+body {
+   position: relative;
+   background-color: map-get($colors, red);
+   background-image: url(/media/dots.png);
+   background-repeat: repeat;
+   &:after {
+      position: absolute;
+      content: ' ';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(/media/texture.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+   }
+}
+
+.lefttitle {
+   position: absolute;
+   top: $nav-height + 40px;
+   left: 20px;
+   font-size: 1.8rem;
+   writing-mode: vertical-rl;
+   transform: rotate(180deg);
+   color: white;
+}
+
+.outline {
+   font-family: $font-feature-outline;
+}
+
+.downloadbutton {
+   @include default-transition-all;
+   margin-top: $size-base * 10;
+   margin-bottom: $size-base * 10;
+   img {
+      width: 250px;
+   }
+   &:hover {
+      opacity: 0.8;
+      transform: scale(1.3);
+   }
+}

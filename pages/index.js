@@ -1,65 +1,69 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Rellax from 'rellax'
 
 export default function Home() {
+
+   useEffect(()=>{
+      
+      new Rellax('.rellax', {
+         speed: -2,
+         // center: true,
+      });
+
+   }, []);
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+         <title>Chivas con el covid</title>
+         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="position-relative">
+         <nav className="main-nav">
+            <img className="nav-logo" src="/media/chivas-con-el-covid.svg" alt=""/>
+            <a href="#!" className="button pink">PDF</a>
+         </nav>
+         <div className="lefttitle">
+            <span className="outline">NO. 001</span> CÁMARA DE COMERCIO E INDUSTRIA DE TEGUCIGALPA
+         </div>
+         <div className="banner">
+            <img className="germen1 rellax" data-rellax-speed="-3" data-rellax-percentage="0.2" src="/media/germen.svg" alt=""/>
+            <img className="germen2 rellax" data-rellax-speed="-7" data-rellax-percentage="0.1" src="/media/germen.svg" alt=""/>
+            <img className="germen3 rellax" data-rellax-speed="-5" data-rellax-percentage="0.9" src="/media/germen.svg" alt=""/>
+            <div className="logo-wrapper">
+               <img className="germen4 rellax" data-rellax-speed="-5" data-rellax-percentage="1" src="/media/germen.svg" alt=""/>
+               <img className="germen" src="/media/germen-vivo.svg" alt=""/>
+               <img className="logo w-100" src="/media/chivas-con-el-covid-grande.svg" alt=""/>
+               <img className="germen-inferior" src="/media/germen-vivo.svg" alt=""/>
+            </div>
+            <div className="container">
+               <div className="infoblocks">
+                  <div className="infoblock yellow">
+                     <span>TODOS PONGAMONOS</span>
+                     <span className="outline chivas">CHIVAS</span>
+                  </div>
+                  <div className="infoblock">
+                     <span>TODO EL MERCADO ESTÁ</span>
+                     <span className="outline chivas">CHIVAS</span>
+                  </div>
+                  <div className="infoblock pink">
+                     <span>PONÉ</span>
+                     <span className="outline chivas">CHIVAS</span>
+                     <span>A TUS COLABORADORES</span>
+                  </div>
+               </div>
+            </div>
+            <a href="#!" className="downloadbutton">
+               <img src="/media/descargar.svg" alt=""/>
+            </a>
+         </div>
+      </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+      <footer>
+         <img src="/media/footer-logos.png" alt=""/>
       </footer>
+
     </div>
   )
 }

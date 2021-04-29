@@ -1,0 +1,32 @@
+.infoblocks {
+   margin-top: $size-base * 25;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   column-gap: $size-base * 3;
+   .infoblock {
+      @include drop-shadow-style;
+      background-color: map-get($colors, blue);
+      border-radius: $border-radius;
+      padding: $size-base * 3 $size-base * 6 $size-base * 3 $size-base * 6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      line-height: 2rem;
+      span {
+         display: inline-block;
+         text-align: center;
+      }
+      .chivas {
+         font-size: 3.4rem;
+         line-height: 2.5rem;
+      }
+      &.yellow {
+         background-color: map-get($colors, yellow);
+      }
+      &.pink {
+         background-color: map-get($colors, pink);
+      }
+   }
+}
