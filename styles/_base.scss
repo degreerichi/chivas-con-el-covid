@@ -31,6 +31,11 @@ body {
    writing-mode: vertical-rl;
    transform: rotate(180deg);
    color: white;
+   @include media-breakpoint-down(sm) {
+      top: $nav-height + 20px;
+      left: 5px;
+      font-size: 1.1rem;
+   }
 }
 
 .outline {

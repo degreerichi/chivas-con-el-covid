@@ -1,4 +1,12 @@
 footer {
+   width: 100%;
    display: flex;
    justify-content: center;
+   padding: $size-base * 4;
+   img {
+      max-width: 500px;
+      @include media-breakpoint-down(sm) {
+         max-width: 300px;
+      }
+   }
 }

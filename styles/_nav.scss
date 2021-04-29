@@ -1,5 +1,6 @@
 .main-nav {
    background-color: map-get($colors, blue);
+   width: 100vw;
    height: $nav-height;
    display: flex;
    flex-direction: row;
@@ -8,7 +9,14 @@
    padding: $size-base * 2;
    border-bottom: 4px solid black;
    box-sizing: border-box;
+   @include media-breakpoint-down(sm) {
+      height: $nav-height * 0.8;
+   }
    .nav-logo {
       height: 80%;
+      @include media-breakpoint-down(sm) {
+         height: auto;
+         width: 220px;
+      }
    }
 }
