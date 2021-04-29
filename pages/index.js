@@ -13,6 +13,10 @@ export default function Home() {
 
    }, []);
 
+   var openPdf = ()=>{
+      window.open('/guia.pdf', '_blank').focus();
+   }
+
   return (
     <div>
       <Head>
@@ -22,7 +26,7 @@ export default function Home() {
       <div className="position-relative">
          <nav className="main-nav">
             <img className="nav-logo" src="/media/chivas-con-el-covid.svg" alt=""/>
-            <a href="#!" className="button pink">PDF</a>
+            <a href="/guia.pdf" className="button pink" target="_blank">PDF</a>
          </nav>
          <div className="lefttitle">
             <span className="outline">NO. 001</span> CÁMARA DE COMERCIO E INDUSTRIA DE TEGUCIGALPA
@@ -39,22 +43,22 @@ export default function Home() {
             </div>
             <div className="container">
                <div className="infoblocks">
-                  <div className="infoblock yellow">
+                  <div className="infoblock yellow" onClick={()=>{openPdf()}}>
                      <span>TODOS PONGAMONOS</span>
                      <span className="outline chivas">CHIVAS</span>
                   </div>
-                  <div className="infoblock">
+                  <div className="infoblock" onClick={()=>{openPdf()}}>
                      <span>TODO EL MERCADO ESTÁ</span>
                      <span className="outline chivas">CHIVAS</span>
                   </div>
-                  <div className="infoblock pink">
+                  <div className="infoblock pink" onClick={()=>{openPdf()}}>
                      <span>PONÉ</span>
                      <span className="outline chivas">CHIVAS</span>
                      <span>A TUS COLABORADORES</span>
                   </div>
                </div>
             </div>
-            <a href="#!" className="downloadbutton">
+            <a href="/guia.pdf" target="_blank" className="downloadbutton">
                <img src="/media/descargar.svg" alt=""/>
             </a>
          </div>
