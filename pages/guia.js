@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import { useRouter } from 'next/router'
+import Footer from '../components/footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { Document, Page, pdfjs } from 'react-pdf'
@@ -30,7 +31,7 @@ export default function Guia() {
    }
 
    return (
-      <div>
+      <>
          <nav className="main-nav">
             <img className="nav-logo" src="/media/chivas-con-el-covid.svg" alt="" data-aos="fade-left" onClick={returnToHome}/>
             <a href="/guia.pdf" className="button pink" target="_blank" data-aos="fade-right" download>PDF</a>
@@ -56,6 +57,7 @@ export default function Guia() {
                </Document>
             </div>
          </div>
-      </div>
+         <Footer/>
+      </>
    )
 }

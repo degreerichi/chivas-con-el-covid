@@ -10,3 +10,8 @@
 @import 'ui';
 @import 'pdf';
 @import 'footer';
+
+.leimage {
+   cursor: pointer;
+   max-height: calc(90vh - #{$nav-height});
+}

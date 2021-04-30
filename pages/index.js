@@ -3,6 +3,9 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Rellax from 'rellax'
 import AOS from "aos"
+import { SRLWrapper } from "simple-react-lightbox"
+import Nav from '../components/nav'
+import Footer from '../components/footer'
 
 import "aos/dist/aos.css";
 
@@ -21,8 +24,8 @@ export default function Home() {
 
    }, []);
 
-   var openPdf = ()=>{
-      router.push('guia');
+   var goTo = (route)=>{
+      router.push(route);
    }
 
    return (
@@ -32,10 +35,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
          <div className="position-relative">
-            <nav className="main-nav">
-               <img className="nav-logo" src="/media/chivas-con-el-covid.svg" alt="" data-aos="fade-left"/>
-               <a href="/guia.pdf" className="button pink" target="_blank" data-aos="fade-right" download>PDF</a>
-            </nav>
+            <Nav/>
             <div className="lefttitle">
                <span data-aos="fade-left"><span className="outline">NO. 001</span> CÁMARA DE COMERCIO E INDUSTRIA DE TEGUCIGALPA</span>
             </div>
@@ -51,15 +51,15 @@ export default function Home() {
                </div>
                <div className="container">
                   <div className="infoblocks">
-                     <div className="infoblock yellow" data-aos="fade-up" data-aos-delay="200" onClick={()=>{openPdf()}}>
+                     <div className="infoblock yellow" data-aos="fade-up" data-aos-delay="200" onClick={()=>{goTo('todoschivas')}}>
                         <span>TODOS PONGAMONOS</span>
                         <span className="outline chivas">CHIVAS</span>
                      </div>
-                     <div className="infoblock" data-aos="fade-up" data-aos-delay="400">
+                     <div className="infoblock" data-aos="fade-up" data-aos-delay="400" onClick={()=>{goTo('mercadochivas')}}>
                         <span>TODO EL MERCADO ESTÁ</span>
                         <span className="outline chivas">CHIVAS</span>
                      </div>
-                     <div className="infoblock pink" data-aos="fade-up" data-aos-delay="600">
+                     <div className="infoblock pink" data-aos="fade-up" data-aos-delay="600" onClick={()=>{goTo('colaboradoreschivas')}}>
                         <span>PONÉ</span>
                         <span className="outline chivas">CHIVAS</span>
                         <span>A TUS COLABORADORES</span>
@@ -72,9 +72,7 @@ export default function Home() {
             </div>
          </div>
 
-         <footer>
-            <img src="/media/footer-logos.png" alt="" data-aos="fade-up"/>
-         </footer>
+         <Footer/>
 
       </div>
   )

@@ -8,6 +8,7 @@
    padding: $size-base * 2;
    border-bottom: 4px solid black;
    box-sizing: border-box;
+   z-index: 999;
    @include media-breakpoint-down(sm) {
       height: $nav-height * 0.8;
    }
