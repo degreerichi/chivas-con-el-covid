@@ -54,3 +54,19 @@ body {
       transform: scale(1.3);
    }
 }
+
+$hs: (
+   h1: 3rem,
+   h2: 2.5rem,
+   h3: 2.2rem,
+   h4: 1.8rem,
+   h5: 1.2rem
+);
+
+@each $key, $size in $hs {
+   #{$key} {
+      color: white;
+      font-size: $size;
+      line-height: $size;
+   }
+}

@@ -1,0 +1,20 @@
+.pdf {
+   position: relative;
+   &:hover {
+      .pdfarrows {
+         opacity: 1;
+         pointer-events: all;
+      }
+   }
+}
+
+.pdfarrows {
+   @include default-transition-all;
+   position: absolute;
+   top: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   filter: drop-shadow(0px 0px 10px black);
+   opacity: 0;
+   pointer-events: none;
+}

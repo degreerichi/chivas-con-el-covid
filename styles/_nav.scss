@@ -12,6 +12,7 @@
       height: $nav-height * 0.8;
    }
    .nav-logo {
+      cursor: pointer;
       height: 80%;
       @include media-breakpoint-down(sm) {
          height: auto;

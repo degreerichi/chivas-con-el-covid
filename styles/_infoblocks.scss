@@ -42,8 +42,7 @@
          background-color: map-get($colors, pink);
       }
       &:hover {
-         opacity: 0.9;
-         transform: scale(0.95);
+         opacity: 0.8;
       }
    }
 }
