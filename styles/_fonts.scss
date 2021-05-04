@@ -14,3 +14,27 @@
       url('/fonts/CAKometo-Regular.woff') format('woff'),
       url('/fonts/CAKometo-Regular.woff2') format('woff2');
 }
+@font-face {
+   font-family: $font-titles;
+   src: 
+      url('/fonts/#{$font-titles}.eot') format('eot'),
+      url('/fonts/#{$font-titles}.ttf') format('ttf'),
+      url('/fonts/#{$font-titles}.woff') format('woff'),
+      url('/fonts/#{$font-titles}.woff2') format('woff2');
+}
+@font-face {
+   font-family: $font-texts;
+   src: 
+      url('/fonts/#{$font-texts}.eot') format('eot'),
+      url('/fonts/#{$font-texts}.ttf') format('ttf'),
+      url('/fonts/#{$font-texts}.woff') format('woff'),
+      url('/fonts/#{$font-texts}.woff2') format('woff2');
+}
+@font-face {
+   font-family: $font-titles-regular;
+   src: 
+      url('/fonts/#{$font-titles-regular}.eot') format('eot'),
+      url('/fonts/#{$font-titles-regular}.ttf') format('ttf'),
+      url('/fonts/#{$font-titles-regular}.woff') format('woff'),
+      url('/fonts/#{$font-titles-regular}.woff2') format('woff2');
+}

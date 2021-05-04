@@ -1,0 +1,82 @@
+.blog-container {
+   position: relative;
+   background-color: white;
+   width: 80%;
+   max-width: 1200px;
+   margin: auto;
+   @include media-breakpoint-down(md) {
+      width: 90%;
+   }
+   .blog-image {
+      margin-bottom: $size-base * 4;
+   }
+   .blog-content {
+      padding: $size-base * 4 $size-base * 12 $size-base * 4 $size-base * 8;
+      @include media-breakpoint-down(md) {
+         padding: $size-base * 4 $size-base * 6 $size-base * 4 $size-base * 6;
+      }
+   }
+
+   .title {
+
+   }
+
+   .subtitle {
+
+   }
+
+   .subtitle2 {
+
+   }
+
+   .subtitle3 {
+
+   }
+}
+
+@each $key, $size in $hs {
+   .blog-container {
+      #{$key} {
+         font-family: $font-titles-regular;
+         color: map-get($colors, red);
+         small {
+
+         }
+      }
+   }
+}
+
+ol, ul {
+   li {
+      font-family: $font-titles-regular;
+      font-size: 1.2rem;
+   }
+}
+
+p {
+   font-family: $font-texts;
+   font-size: 1.2rem;
+   text-align: justify;
+   padding-left: $size-base * 5;
+   @include media-breakpoint-down(md) {
+      padding-left: 0;
+   }
+}
+
+.indice-button {
+   @include default-transition-all;
+   @include drop-shadow-style;
+   z-index: 999;
+   position: fixed;
+   bottom: $size-base * 4;
+   left: $size-base * 2;
+   padding: $size-base * 2 $size-base * 6 $size-base * 2 $size-base * 6;
+   background-color: white;
+   border-radius: $border-radius;
+   font-size: 1.4rem;
+   text-decoration: none;
+   &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+   }
+}

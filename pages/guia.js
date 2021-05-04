@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
 import { useRouter } from 'next/router'
+import Nav from '../components/nav'
 import Footer from '../components/footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -32,10 +33,7 @@ export default function Guia() {
 
    return (
       <>
-         <nav className="main-nav">
-            <img className="nav-logo" src="/media/chivas-con-el-covid.svg" alt="" data-aos="fade-left" onClick={returnToHome}/>
-            <a href="/guia.pdf" className="button pink" target="_blank" data-aos="fade-right" download>PDF</a>
-         </nav>
+         <Nav/>
          <div className="container">
             <div className="w-100 d-flex justify-content-center flex-column align-items-center position-relative my-5">
                <h3 className="mb-3">Guía para empleadores del sector del comercio</h3>

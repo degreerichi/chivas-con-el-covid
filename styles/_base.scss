@@ -68,5 +68,20 @@ $hs: (
       color: white;
       font-size: $size;
       line-height: $size;
+      small {
+         font-size: $size / 2;
+         line-height: $size / 2;
+         display: inline-block;
+         margin: 0;
+         padding: 0;
+      }
+   }
+}
+
+a {
+   color: map-get($colors, red);
+   word-wrap: break-word;
+   &:hover {
+      color: map-get($colors, red);
    }
 }
