@@ -69,6 +69,12 @@ export default function Home() {
                <a href="/guia.pdf" target="_blank" className="downloadbutton" data-aos="fade-up" download>
                   <img src="/media/descargar.svg" alt=""/>
                </a>
+               <div className="w-100 d-flex justify-content-center align-items-center">
+                  <div className="infoblock yellow" data-aos="fade-up" data-aos-delay="200" onClick={()=>{goTo('guiaweb')}}>
+                     <span>Puedes ver la Guía en Línea</span>
+                     <span className="outline chivas">PONTE CHIVAS</span>
+                  </div>
+               </div>
             </div>
          </div>
 

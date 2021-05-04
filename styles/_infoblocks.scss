@@ -9,40 +9,40 @@
       row-gap: $size-base * 3;
       padding: $size-base * 2;
    }
-   .infoblock {
-      @include drop-shadow-style;
-      @include default-transition-all;
-      box-sizing: border-box;
-      background-color: map-get($colors, blue);
-      border-radius: $border-radius;
-      padding: $size-base * 3 $size-base * 6 $size-base * 3 $size-base * 6;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      line-height: 2rem;
-      cursor: pointer;
-      @include media-breakpoint-down(md) {
-         font-size: 1.8rem;
-         line-height: 1.8rem;
-      }
-      span {
-         display: inline-block;
-         text-align: center;
-      }
-      .chivas {
-         font-size: 3.4rem;
-         line-height: 2.5rem;
-      }
-      &.yellow {
-         background-color: map-get($colors, yellow);
-      }
-      &.pink {
-         background-color: map-get($colors, pink);
-      }
-      &:hover {
-         opacity: 0.8;
-      }
+}
+.infoblock {
+   @include drop-shadow-style;
+   @include default-transition-all;
+   box-sizing: border-box;
+   background-color: map-get($colors, blue);
+   border-radius: $border-radius;
+   padding: $size-base * 3 $size-base * 6 $size-base * 3 $size-base * 6;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 2rem;
+   line-height: 2rem;
+   cursor: pointer;
+   @include media-breakpoint-down(md) {
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+   }
+   span {
+      display: inline-block;
+      text-align: center;
+   }
+   .chivas {
+      font-size: 3.4rem;
+      line-height: 2.5rem;
+   }
+   &.yellow {
+      background-color: map-get($colors, yellow);
+   }
+   &.pink {
+      background-color: map-get($colors, pink);
+   }
+   &:hover {
+      opacity: 0.8;
    }
 }
